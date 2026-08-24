@@ -122,12 +122,89 @@
   background-color: #FFEEDB; 
 }
 
-/* 4. 鼠标悬停动效 */
-.sort-btn:hover {
-  opacity: 0.85;
-  transform: translateY(-2px);
+
+
+
+.information {
+  display: flex;
+  justify-content: center;
+  gap: 70px;                   /* 卡片之间的缝隙 */
+  padding: 40px 20px;
+  
 }
 
+/* 每一个独立的卡片列 */
+.column {
+  width: 350px;
+  background-color: #fff6df;   /* 卡片的淡黄色背景 */
+  padding: 35px 25px;
+  text-align: center;          /* 内部所有文字和图片水平居中 */
+  box-sizing: border-box;
+}
+
+/* 1. 店名标题 */
+.info-title {
+  font-size: 35px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #222;
+  font-weight: bold;
+}
+
+/* 2. 图片容器与图片 */
+.image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;           /* 防止图片拉伸变形 */
+  display: block;
+}
+
+/* 3. 图片来源微型字 */
+.resource {
+  font-size: 10px;
+  color: #666;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+/* 4. 信息段落（Location, Food Type 等） */
+.info-text p {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.info-text strong {
+  font-weight: 600;
+}
+
+/* 5. 底部详情按钮链接 */
+.more-detail {
+  display: inline-block;
+  margin-top: 10px;
+  color: #333;
+  font-size: 20px;
+}
+
+.footercredit{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  height: 70px;
+  padding: 30px 15px;
+  background-color: #FFEABF;
+}
+
+.credittitle{
+  font-size: 18px;
+  margin: 0;
+}
+
+.credit{
+  margin: 0;
+  line-height: 1.4;
+}
 
 body{
     background-color: #FEF9EB;
