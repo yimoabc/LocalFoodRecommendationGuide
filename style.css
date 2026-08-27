@@ -182,7 +182,6 @@
 
 
 .more-detail {
-  display: inline-block;
   margin-top: 10px;
   color: #333;
   font-size: 20px;
@@ -208,4 +207,33 @@
 
 body{
     background-color: #FEF9EB;
+}
+
+.h-column{
+  display: grid;
+  grid-template-columns: 300px 1fr; 
+  gap: 30px;                         
+  align-items: center;
+  background-color:#FFEABF ;
+  padding: 25px 15px;
+}
+
+.h-info-title{
+  margin-top: 50px;
+  text-align: center;
+  background-color:#fbd1b7 ;
+  padding: 15px 10px;
+}
+
+
+.h-info-text{
+  margin-left: 200px;
+  margin-bottom: 20px;
+}
+
+.h-more-detail{
+  text-align: center;
+  margin-top: 10px;
+  color: #333;
+  font-size: 20px;
 }
