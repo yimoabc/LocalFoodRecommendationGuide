@@ -6,9 +6,9 @@
     height: 352px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; /*按比例放大图片直到填满整个框*/
     overflow: hidden; /* 超出尺寸就切掉 */
-    position: relative; /* 设置边界*/
+    position: relative; /* 给后面的其他元素设置边界*/
 }
 
 .hero-image2{
@@ -16,9 +16,9 @@
     height: 352px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; /*按比例放大图片直到填满整个框*/
     overflow: hidden; /* 超出尺寸就切掉 */
-    position: relative; /* 设置边界*/
+    position: relative; /* 给后面的其他元素设置边界*/
 
 }
 
@@ -27,10 +27,9 @@
     height: 352px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;  /*按比例放大图片直到填满整个框*/
     overflow: hidden; /* 超出尺寸就切掉 */
-    position: relative; /* 设置边界*/
-
+    position: relative; /* 给后面的其他元素设置边界*/
 }
 
 .hero-image4{
@@ -38,7 +37,7 @@
     height: 352px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; /*按比例放大图片直到填满整个框*/
     overflow: hidden; /* 超出尺寸就切掉 */
     position: relative; /* 设置边界*/
 
@@ -105,7 +104,7 @@
   width: 260px;              /* 固定按钮宽度 */
   text-align: center;        /* 文字居中 */
   box-sizing: border-box;    /* 防止 padding 撑大按钮 */
-  transition: all 0.2s;      /* 悬停动画 */
+  transition: all 0.2s;      /* 在hover work的时候的过渡 */
 }
 
 
@@ -126,8 +125,8 @@
 
 
 .information {
-  display: flex;
-  justify-content: center;
+  display: flex;  /* 开启弹性布局so可以变成横向的 */
+  justify-content: center;  /* 默认在中间*/
   gap: 70px;                   /* 卡片之间的缝隙 */
   padding: 40px 20px;
   
@@ -139,7 +138,7 @@
   background-color: #fff6df;   /* 卡片的淡黄色背景 */
   padding: 35px 25px;
   text-align: center;          /* 内部所有文字和图片水平居中 */
-  box-sizing: border-box;
+  box-sizing: border-box;        /* padding不撑爆设定的width */
 }
 
 
@@ -156,8 +155,8 @@
 .image img {
   width: 100%;
   height: 200px;
-  object-fit: cover;           /* 防止图片拉伸变形 */
-  display: block;
+  object-fit: cover;           /* 保持图片原本的宽高比，按比例放大并填满整个框，超出部分直接裁剪*/
+  display: block;          /* 让元素独占一整行，强行把后面的所有元素挤到下一行去*/
 }
 
 
@@ -225,8 +224,8 @@ body{
 
 
 .h-column {
-  display: grid;
-  grid-template-columns: 300px 1fr; /* 左列固定 300px，右列自动充满 */
+  display: grid; /* 开启网格布局，可以自动排在一起 */
+  grid-template-columns: 300px 1fr; /* 设定为左列固定 300px，右列自动充满 */
   gap: 40px;                        /* 左右两列间隔 */
   background-color: #FFEABF;
   padding: 25px 30px;
@@ -240,9 +239,9 @@ body{
 .h-column-img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  object-fit: cover;    /* 保持图片原本的宽高比，按比例放大并填满整个框，超出部分直接裁剪*/
   border-radius: 6px;
-  display: block;
+  display: block;  /* 让元素独占一整行，强行把后面的所有元素挤到下一行去*/
 }
 
 .h-resource {
@@ -263,11 +262,11 @@ body{
 
 
 .h-more-detail {
-  display: inline-block;
+  display: inline-block; /*让元素可以被设置宽高，又可以像文字一样排在一起*/
   margin-top: 10px;
   color: #333;
   font-size: 18px;
-  text-decoration: none;             
+  text-decoration: none;       
   font-weight: bold;
 }
 
