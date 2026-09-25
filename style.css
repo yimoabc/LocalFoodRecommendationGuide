@@ -290,22 +290,42 @@ body{
   color: #d97736; 
 }
 
-@media (max-width: 768px) { /*如果屏幕的宽度小于或等于 768 像素*/
-    .information {
-        flex-direction: column;
-        align-items: center;
+
+@media (max-width: 768px) {   /*如果屏幕的宽度小于或等于 768 像素*/
+    
+    .hero-image, .hero-image2, .hero-image3, .hero-image4 {
+        display: flex;                /* 开启 Flex 弹性布局，方便自由排列内部元素 */
+        flex-direction: column;       /* 让容器里面的文字和按钮改从上到下“竖向”排列 */
+        align-items: center;          /* 强制所有内部元素水平居中对齐 */
+        text-align: center;           /* 容器内的所有文本水平居中显示 */
+        padding: 30px 20px;           /* 容器内部上下留 30px、左右留 20px 的边距，防止字贴屏幕边缘 */
     }
-    .h-column {
-        grid-template-columns: 1fr;
-    }
+
+    
     .hero-text, .hero-text2, .small-text {
-        position: static;
-        width: 100%;
-        margin: 10px 0;
-        text-align: center;
+        position: static;             /* 取消原本在电脑端设置的绝对定位（Absolute），让它们回归普通的文档流 */
+        width: 100%;                  /* 宽度占满整行 */
+        margin: 10px 0;               /* 上下各留 10px 外边距，拉开文字之间的间距 */
+        text-align: center;           /* 文本保持水平居中 */
     }
+
+    
     .sort-buttons, .returnbutton {
-        position: static;
-        margin: 15px auto;
+        position: static;             /* 取消绝对定位，防止按钮悬浮在文字上方挡住标题 */
+        margin: 20px auto 0 auto;     /* 顶部留 20px 间距，左右自动平分 margin 实现整体居中 */
+        width: 100%;                  /* 按钮容器宽度占满屏幕 */
+        align-items: center;          /* 确保按钮组里的每个按钮都水平居中 */
     }
-}
+
+    
+    .information {
+        flex-direction: column;       /* 原本在电脑端横排的 3 个餐厅卡片，在手机端改变成“从上到下一竖排” */
+        align-items: center;          /* 让这 3 个卡片在手机屏幕中央对齐 */
+    }
+
+    
+    .h-column {
+        grid-template-columns: 1fr;   /* 原本左边放图（300px）、右边放字（1fr）的左右网格，强制合并为“单列结构”（图在上面，字在下面） */
+    }
+
+} 
