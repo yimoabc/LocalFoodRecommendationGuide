@@ -3,42 +3,46 @@
 }
 .hero-image{
     background-image: url("Image/header.png");
-    height: 352px;
+    min-height: 352px; /* 保持 352px，在手机端内容多时会自动往下拉长扩张 */
+    height: auto;      /* 允许高度跟随内容自由延长 */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; /*按比例放大图片直到填满整个框*/
-    overflow: hidden; /* 超出尺寸就切掉 */
+    padding-bottom: 30px; /* 留出底部边距，防止按钮贴底 */
     position: relative; /* 给后面的其他元素设置边界*/
 }
 
 .hero-image2{
     background-image: url("Image/cafe2-unsplash.png");
-    height: 352px;
+    min-height: 352px; /* 保持 352px，在手机端内容多时会自动往下拉长扩张 */
+    height: auto;      /* 允许高度跟随内容自由延长 */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; /*按比例放大图片直到填满整个框*/
-    overflow: hidden; /* 超出尺寸就切掉 */
+    padding-bottom: 30px; /* 留出底部边距，防止按钮贴底 */
     position: relative; /* 给后面的其他元素设置边界*/
 
 }
 
 .hero-image3{
     background-image: url("Image/breakfast-unsplash.png");
-    height: 352px;
+    min-height: 352px; /* 保持 352px，在手机端内容多时会自动往下拉长扩张 */
+    height: auto;      /* 允许高度跟随内容自由延长 */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;  /*按比例放大图片直到填满整个框*/
-    overflow: hidden; /* 超出尺寸就切掉 */
+    padding-bottom: 30px; /* 留出底部边距，防止按钮贴底 */
     position: relative; /* 给后面的其他元素设置边界*/
 }
 
 .hero-image4{
     background-image: url("Image/cupcake-unplash.png");
-    height: 352px;
+    min-height: 352px; /* 保持 352px，在手机端内容多时会自动往下拉长扩张 */
+    height: auto;      /* 允许高度跟随内容自由延长 */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; /*按比例放大图片直到填满整个框*/
-    overflow: hidden; /* 超出尺寸就切掉 */
+    padding-bottom: 30px; /* 留出底部边距，防止按钮贴底 */
     position: relative; /* 设置边界*/
 
 }
@@ -134,7 +138,8 @@
 
 
 .column {
-  width: 350px;
+  max-width: 350px;    /*屏幕的宽度小于或等于 350 像素*/
+  width: 100%;
   background-color: #fff6df;   /* 卡片的淡黄色背景 */
   padding: 35px 25px;
   text-align: center;          /* 内部所有文字和图片水平居中 */
@@ -189,9 +194,12 @@
 .footercredit{
   margin-top: 50px;
   margin-bottom: 10px;
-  height: 70px;
-  padding: 30px 15px;
+  min-height: 70px;      /* 改为最小高度 70px */
+  height: auto;          /* 让高度随文字行数自动撑开 */
+  padding: 20px 20px;    /* 留出上下左右的边距，防止文字贴边 */
   background-color: #FFEABF;
+  box-sizing: border-box; /* 确保 padding 不会导致容器溢出 */
+  
 }
 
 .credittitle{
