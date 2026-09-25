@@ -281,3 +281,23 @@ body{
 .btn:hover{
   color: #d97736; 
 }
+
+@media (max-width: 768px) { /*如果屏幕的宽度小于或等于 768 像素*/
+    .information {
+        flex-direction: column;
+        align-items: center;
+    }
+    .h-column {
+        grid-template-columns: 1fr;
+    }
+    .hero-text, .hero-text2, .small-text {
+        position: static;
+        width: 100%;
+        margin: 10px 0;
+        text-align: center;
+    }
+    .sort-buttons, .returnbutton {
+        position: static;
+        margin: 15px auto;
+    }
+}
